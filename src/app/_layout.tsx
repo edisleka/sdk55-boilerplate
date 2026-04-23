@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 SplashScreen.preventAutoHideAsync()
 
 const InitialLayout = () => {
-  const [fontsLoaded] = useFonts({
+  const [loaded, error] = useFonts({
     'sans-regular': require('@/assets/fonts/PlusJakartaSans-Regular.ttf'),
     'sans-medium': require('@/assets/fonts/PlusJakartaSans-Medium.ttf'),
     'sans-bold': require('@/assets/fonts/PlusJakartaSans-Bold.ttf'),
@@ -17,12 +17,12 @@ const InitialLayout = () => {
   })
 
   useEffect(() => {
-    if (fontsLoaded) {
+    if (loaded || error) {
       SplashScreen.hideAsync()
     }
-  }, [fontsLoaded])
+  }, [loaded, error])
 
-  if (!fontsLoaded) {
+  if (!loaded && !error) {
     return null
   }
 
