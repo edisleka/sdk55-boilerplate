@@ -1,9 +1,5 @@
-import { Text, View } from 'react-native'
+import NotFoundScreen from '@/screens/NotFound'
 
 export default function NotFound() {
-  return (
-    <View>
-      <Text>NotFound</Text>
-    </View>
-  )
+  return <NotFoundScreen />
 }
