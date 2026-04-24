@@ -34,7 +34,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     ),
     secondTitle: 'Own Goal',
     subTitle:
-      'Personalize your study plan with flexible timelines that suit you best about our courses',
+      'Personalize your study plan with flexible timelines that suit you best.',
   },
   {
     // color: '#4384D9',
@@ -51,7 +51,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     title: 'Complete full',
     secondTitle: 'Course',
     subTitle:
-      'Achieve certification by completing courses with dedicated effort about our courses',
+      'Achieve certification by completing courses with consistent dedication.',
   },
   {
     // color: '#04BF9D',
@@ -68,6 +68,6 @@ export const onboardingSlides: onboardingSlidesType[] = [
     title: 'Get Started',
     secondTitle: 'Now',
     subTitle:
-      'Start your journey to success with our courses now with us on your own goal',
+      'Start your journey to success with expert guidance and clear milestones.',
   },
 ]
