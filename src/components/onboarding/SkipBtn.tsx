@@ -17,7 +17,7 @@ export const SkipBtn = () => {
           borderRadius: 999,
         }}
       >
-        <Text className='will-change-variable text-secondary-turquoise text-lg font-semibold'>
+        <Text className='will-change-auto text-secondary-turquoise text-lg font-semibold'>
           Skip
         </Text>
         <MaterialIcons name='navigate-next' size={20} color='#04bf9d' />

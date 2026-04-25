@@ -1,4 +1,5 @@
 import '@/root/global.css'
+import { useOnboardingStore } from '@/store/onboardingStore'
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
@@ -16,6 +17,11 @@ const InitialLayout = () => {
     'sans-light': require('@/assets/fonts/PlusJakartaSans-Light.ttf'),
   })
 
+  const hasCompletedOnboarding = useOnboardingStore(
+    (state) => state.hasCompletedOnboarding
+  )
+  const isAuthenticated = false
+
   useEffect(() => {
     if (loaded || error) {
       SplashScreen.hideAsync()
@@ -30,9 +36,15 @@ const InitialLayout = () => {
     <>
       <StatusBar style='auto' />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name='(auth)' />
-        <Stack.Screen name='(onboarding)' />
-        <Stack.Screen name='(protected)' />
+        <Stack.Protected guard={!hasCompletedOnboarding && !isAuthenticated}>
+          <Stack.Screen name='(onboarding)' />
+        </Stack.Protected>
+        <Stack.Protected guard={hasCompletedOnboarding && !isAuthenticated}>
+          <Stack.Screen name='(auth)' />
+        </Stack.Protected>
+        <Stack.Protected guard={hasCompletedOnboarding && isAuthenticated}>
+          <Stack.Screen name='(protected)' />
+        </Stack.Protected>
         <Stack.Screen name='+not-found' />
       </Stack>
     </>
