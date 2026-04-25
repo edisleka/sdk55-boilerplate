@@ -1,9 +1,9 @@
 import { SkipBtn } from '@/components/onboarding/SkipBtn'
+import { SafeAreaView } from '@/components/UI/styled'
 import { onboardingSlides } from '@/data/onboarding'
 import { useOnboardingStore } from '@/store/onboardingStore'
 import { useState } from 'react'
 import { Pressable, Text, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Onboarding() {
   const { completeOnboarding } = useOnboardingStore()
@@ -20,7 +20,7 @@ export default function Onboarding() {
   }
 
   return (
-    <SafeAreaView style={{ backgroundColor: '#ffffff', flex: 1 }}>
+    <SafeAreaView className='bg-white flex-1'>
       <View className='flex-1 px-6'>
         <SkipBtn />
 
