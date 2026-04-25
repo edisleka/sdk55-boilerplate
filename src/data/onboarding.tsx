@@ -1,9 +1,6 @@
+import { Image } from '@/components/UI/styled'
 import { OnboardingImages } from '@/constants/images'
 import { onboardingSlidesType } from '@/types/onboarding/onboarding-types'
-import { Image as ExpoImage } from 'expo-image'
-import { styled } from 'nativewind'
-
-const Image = styled(ExpoImage)
 
 export const onboardingSlides: onboardingSlidesType[] = [
   {

@@ -1,12 +1,9 @@
 import { SkipBtn } from '@/components/onboarding/SkipBtn'
+import { SafeAreaView } from '@/components/UI/styled'
 import { onboardingSlides } from '@/data/onboarding'
 import { useOnboardingStore } from '@/store/onboardingStore'
-import { styled } from 'nativewind'
 import { useState } from 'react'
 import { Pressable, Text, View } from 'react-native'
-import { SafeAreaView as RNFSafeAreaView } from 'react-native-safe-area-context'
-
-const SafeAreaView = styled(RNFSafeAreaView)
 
 export default function Onboarding() {
   const { completeOnboarding } = useOnboardingStore()
