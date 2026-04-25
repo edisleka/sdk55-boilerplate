@@ -1,3 +1,4 @@
+import { OnboardingImages } from '@/constants/images'
 import { onboardingSlidesType } from '@/types/onboarding/onboarding-types'
 import { Image } from 'expo-image'
 
@@ -7,7 +8,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     title: 'Explore',
     image: (
       <Image
-        source={require('@/images/onboarding/onboarding-1.png')}
+        source={OnboardingImages.OnboardingOne}
         style={{
           width: '100%',
           height: '100%',
@@ -24,7 +25,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     title: 'Set Your',
     image: (
       <Image
-        source={require('@/images/onboarding/onboarding-2.png')}
+        source={OnboardingImages.OnboardingTwo}
         style={{
           width: '100%',
           height: '100%',
@@ -40,7 +41,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     // color: '#4384D9',
     image: (
       <Image
-        source={require('@/images/onboarding/onboarding-3.png')}
+        source={OnboardingImages.OnboardingThree}
         style={{
           width: '100%',
           height: '100%',
@@ -57,7 +58,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     // color: '#04BF9D',
     image: (
       <Image
-        source={require('@/images/onboarding/onboarding-4.png')}
+        source={OnboardingImages.OnboardingFour}
         style={{
           width: '100%',
           height: '100%',

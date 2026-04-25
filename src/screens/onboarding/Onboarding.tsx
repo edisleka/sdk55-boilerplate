@@ -20,7 +20,7 @@ export default function Onboarding() {
   }
 
   return (
-    <SafeAreaView style={{ backgroundColor: 'red', flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: '#ffffff', flex: 1 }}>
       <View className='flex-1 px-6'>
         <SkipBtn />
 
