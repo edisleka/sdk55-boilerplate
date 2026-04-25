@@ -30,14 +30,14 @@ export default function Onboarding() {
           </View>
 
           <View className='flex-col gap-4 mb-12'>
-            <Text className='will-change-variable text-2xl font-semibold'>
+            <Text className='will-change-auto text-2xl font-semibold'>
               {currentSlide.title}
             </Text>
 
-            <Text className='will-change-variable text-2xl font-bold -mt-2 text-secondary'>
+            <Text className='will-change-auto text-2xl font-bold -mt-2 text-secondary'>
               {currentSlide.secondTitle}
             </Text>
-            <Text className='will-change-variable text-base leading-6 opacity-90'>
+            <Text className='will-change-auto text-base leading-6 opacity-90'>
               {currentSlide.subTitle}
             </Text>
           </View>
@@ -49,7 +49,7 @@ export default function Onboarding() {
               <Pressable
                 key={index}
                 onPress={() => setCurrentSlideIndex(index)}
-                className={`will-change-variable h-2 mx-2.5 rounded-xl bg-primary-deep-blue ${index === currentSlideIndex ? 'w-8 opacity-100' : 'w-4 opacity-50'}`}
+                className={`will-change-auto h-2 mx-2.5 rounded-xl bg-primary-deep-blue ${index === currentSlideIndex ? 'w-8 opacity-100' : 'w-4 opacity-50'}`}
               />
             ))}
           </View>

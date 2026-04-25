@@ -17,7 +17,9 @@ const InitialLayout = () => {
     'sans-light': require('@/assets/fonts/PlusJakartaSans-Light.ttf'),
   })
 
-  const { hasCompletedOnboarding } = useOnboardingStore()
+  const hasCompletedOnboarding = useOnboardingStore(
+    (state) => state.hasCompletedOnboarding
+  )
   const isAuthenticated = false
 
   useEffect(() => {
