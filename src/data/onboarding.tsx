@@ -1,6 +1,9 @@
 import { OnboardingImages } from '@/constants/images'
 import { onboardingSlidesType } from '@/types/onboarding/onboarding-types'
-import { Image } from 'expo-image'
+import { Image as ExpoImage } from 'expo-image'
+import { styled } from 'nativewind'
+
+const Image = styled(ExpoImage)
 
 export const onboardingSlides: onboardingSlidesType[] = [
   {
@@ -9,10 +12,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     image: (
       <Image
         source={OnboardingImages.OnboardingOne}
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
+        className='w-full h-full'
         contentFit='contain'
       />
     ),
@@ -26,10 +26,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     image: (
       <Image
         source={OnboardingImages.OnboardingTwo}
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
+        className='w-full h-full'
         contentFit='contain'
       />
     ),
@@ -42,10 +39,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     image: (
       <Image
         source={OnboardingImages.OnboardingThree}
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
+        className='w-full h-full'
         contentFit='contain'
       />
     ),
@@ -59,10 +53,7 @@ export const onboardingSlides: onboardingSlidesType[] = [
     image: (
       <Image
         source={OnboardingImages.OnboardingFour}
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
+        className='w-full h-full'
         contentFit='contain'
       />
     ),
